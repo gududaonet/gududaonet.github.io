@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "gududaonet.github.io",
-  "Id": "9f2e8a46-af1e-4649-9a41-bbb0e3978ed5"
-}
