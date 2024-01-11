@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+}
+
+.panel {
+    width: 90%;
+    max-width: 700px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    color: rgb(51, 51, 51);
+    font-weight: 100;
+}
+
+.logo path {
+    pointer-events: none;
+    fill: none;
+    stroke-linecap: round;
+    stroke-width: 7;
+    stroke: rgb(255, 255, 255);
+}
+
+.big-title {
+    text-align: center;
+    font-size: 2.66rem;
+    margin-top: 26px;
+    margin-right: 0px;
+    margin-bottom: 26px;
+    margin-left: 0px;
+    color: rgb(24, 144, 255);
+    font-weight: 400;
+}
+
+.description {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.wechat-group {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.wechat-group img {
+    max-width: 220px;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 100%;
+}
+
+.welcome-img {
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.welcome-img img {
+    width: 100%;
+}
+
+.c1210 {
+    font-size: 40px;
+}
+
+@media (max-width: 767.98px) {
+    .big-title {
+        font-size: 1.9rem;
+    }
+}
