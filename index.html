@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>孤独岛工作室 服务器中心</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+<style type="text/css">
+@import url("MiSans_Regular/stylesheet.css");
+.container.flex-lg-row.flex-nowrap.align-items-center .navbar-collapse.offcanvas.offcanvas-nav.offcanvas-start .offcanvas-header.d-lg-none .text-white.fs-30.mb-0 {
+    font-family: MiSans Regular;
+}
+body {
+    font-family: MiSans Regular;
+}
+div {
+    font-family: MiSans Regular;
+}
+</style>
+<style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .server-button {
+            margin: 20px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            color: white;
+            background-color: #007BFF;
+            cursor: pointer;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .latency {
+            font-size: 18px;
+        }
+        .green {
+            color: green;
+        }
+        .yellow {
+            color: yellow;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>孤独岛工作室 网址发布页</h1>
+   <p>孤独岛工作室永久官网 GududaoNet.Github.io</p>
+    <button id="server1" class="server-button" onclick="window.location.href='https://studio.主页.cn'">主服务器：Studio.主页.CN</button>
+    <div id="latency1" class="latency"></div>
+    <button id="server2" class="server-button" onclick="window.location.href='https://gududaostudio.cn.eu.org'">备用服务器：Gududaostudio.CN.EU.ORG</button>
+    <div id="latency2" class="latency"></div>
+
+    <script>
+        function pingServer(serverUrl, latencyId) {
+            let startTime = Date.now();
+            fetch(serverUrl, { mode: 'no-cors' })
+                .then(() => {
+                    let latency = Date.now() - startTime;
+                    let latencyDiv = document.getElementById(latencyId);
+                    if (latency < 1000) {
+                        latencyDiv.className = 'latency green';
+                        latencyDiv.innerText = '延迟: ' + latency + 'ms';
+                    } else {
+                        latencyDiv.className = 'latency yellow';
+                        latencyDiv.innerText = '延迟: ' + latency + 'ms';
+                    }
+                })
+                .catch(() => {
+                    let latencyDiv = document.getElementById(latencyId);
+                    latencyDiv.className = 'latency red';
+                    latencyDiv.innerText = '无法访问服务器';
+                });
+        }
+
+        pingServer('https://studio.主页.cn', 'latency1');
+        pingServer('https://gududaostudio.cn.eu.org', 'latency2');
+    </script>
+</body>
+</html>
