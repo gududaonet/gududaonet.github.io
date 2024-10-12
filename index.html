@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>孤独岛工作室 现行网址列表</title>
+    <title>生生不息Project</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -55,13 +55,26 @@ div {
     </style>
 </head>
 <body>
-    <h1>孤独岛工作室 现行网址列表</h1>
+    <h1>生生不息Project</h1>
+    <h2>孤独岛工作室 现行网址列表</h2>
    <p>您正在访问孤独岛工作室永久官网 GududaoNet.Github.io</p>
-    <button id="server1" class="server-button" onclick="window.location.href='https://studio.主页.cn'">主站：Studio.主页.CN</button>
+    <p>站点皆有可能开启禁Ping防护，具体访问状况请参照实际</p>
+    <button id="server1" class="server-button" onclick="window.location.href='https://studio.主页.cn'">主体站点</button>
     <div id="latency1" class="latency"></div>
-    <button id="server2" class="server-button" onclick="window.location.href='https://gududaostudio.cn.eu.org'">备用站点（正在维护中）：Gududaostudio.CN.EU.ORG</button>
+    <button id="server2" class="server-button" onclick="window.location.href='https://gududaostudio.eu.org'">主站</button>
     <div id="latency2" class="latency"></div>
-
+    <button id="server3" class="server-button" onclick="window.location.href='https://gududaostudio.cn.eu.org'">站点2</button>
+    <div id="latency3" class="latency"></div>
+    <button id="server4" class="server-button" onclick="window.location.href='https://studio.gududaostudio.cn.eu.org'">站点3</button>
+    <div id="latency4" class="latency"></div>
+    <button id="server5" class="server-button" onclick="window.location.href='https://studio.web.gududaostudio.cn.eu.org'">站点4</button>
+    <div id="latency5" class="latency"></div>
+    <button id="server6" class="server-button" onclick="window.location.href='https://studio.gududaostudio.eu.org'">站点5</button>
+    <div id="latency6" class="latency"></div>
+    <button id="server7" class="server-button" onclick="window.location.href='https://studio.web.gududaostudio.eu.org'">站点6</button>
+    <div id="latency7" class="latency"></div>
+    <button id="server8" class="server-button" onclick="window.location.href='https://gududaocdn.pages.dev/'">站点7</button>
+    <div id="latency8" class="latency"></div>
     <script>
         function pingServer(serverUrl, latencyId) {
             let startTime = Date.now();
@@ -85,7 +98,13 @@ div {
         }
 
         pingServer('https://studio.主页.cn', 'latency1');
-        pingServer('https://gududaostudio.cn.eu.org', 'latency2');
+        pingServer('https://gududaostudio.eu.org', 'latency2');
+        pingServer('https://gududaostudio.cn.eu.org', 'latency3');
+        pingServer('https://studio.gududaostudio.cn.eu.org', 'latency4');
+        pingServer('https://studio.web.gududaostudio.cn.eu.org', 'latency5');
+        pingServer('https://studio.gududaostudio.eu.org', 'latency6');
+        pingServer('https://studio.web.gududaostudio.eu.org', 'latency7');
+        pingServer('https://gududaocdn.pages.dev/', 'latency8');
     </script>
 </body>
 </html>
