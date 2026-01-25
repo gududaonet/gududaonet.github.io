@@ -1,151 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>Page Not Found </title>
-<style>
-::-moz-selection {
-        background: #b3d4fc;
-        text-shadow: none;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>孤独岛工作室产业站群</title>
 
-      ::selection {
-        background: #b3d4fc;
-        text-shadow: none;
-      }
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-      html {
-        padding: 30px 10px;
-        font-size: 20px;
-        line-height: 1.4;
-        color: #737373;
-        background: #f0f0f0;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-      }
+  <style>
+@import url("MiSans_Regular/stylesheet.css");
+.container.flex-lg-row.flex-nowrap.align-items-center .navbar-collapse.offcanvas.offcanvas-nav.offcanvas-start .offcanvas-header.d-lg-none .text-white.fs-30.mb-0 {
+    font-family: MiSans Regular;
+}
+body {
+    font-family: MiSans Regular;
+}
 
-      html,
-      input {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
 
-      body {
-        max-width: 500px;
-        _width: 500px;
-        padding: 30px 20px 50px;
-        border: 1px solid #b3b3b3;
-        border-radius: 4px;
-        margin: 0 auto;
-        box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
-        background: #fcfcfc;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      h1 {
-        margin: 0 10px;
-        font-size: 50px;
-        text-align: center;
-      }
+    body {
+      background-color: aliceblue;
+      color: black;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      h1 span {
-        color: #bbb;
-      }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
 
-      h3 {
-        margin: 1.5em 0 0.5em;
-      }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-      p {
-        margin: 1em 0;
-      }
+    header p {
+      font-size: 1.2rem;
+      color:darkcyan;
+    }
 
-      ul {
-        padding: 0 0 0 40px;
-        margin: 1em 0;
-      }
+    .link-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
 
-      .container {
-        max-width: 380px;
-        _width: 380px;
-        margin: 0 auto;
-      }
+    .card {
+      background-color: azure;
+      border: 1px solid gray;
+      border-radius: 7px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-      /* google search */
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: white;
+    }
 
-      #goog-fixurl ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+    a {
+      color:#666666;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
 
-      #goog-fixurl form {
-        margin: 0;
-      }
+    a:hover {
+      text-decoration: underline;
+    }
 
-      #goog-wm-qt,
-      #goog-wm-sb {
-        border: 1px solid #bbb;
-        font-size: 16px;
-        line-height: normal;
-        vertical-align: top;
-        color: #444;
-        border-radius: 2px;
-      }
+    .latency {
+        font-weight: normal;
+    }
 
-      #goog-wm-qt {
-        width: 220px;
-        height: 20px;
-        padding: 5px;
-        margin: 5px 10px 0 0;
-        box-shadow: inset 0 1px 1px #ccc;
-      }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: darkcyan;
+    }
 
-      #goog-wm-sb {
-        display: inline-block;
-        height: 32px;
-        padding: 0 10px;
-        margin: 5px 0 0;
-        white-space: nowrap;
-        cursor: pointer;
-        background-color: #f5f5f5;
-        background-image: -webkit-linear-gradient(rgba(255,255,255,0), #f1f1f1);
-        background-image: -moz-linear-gradient(rgba(255,255,255,0), #f1f1f1);
-        background-image: -ms-linear-gradient(rgba(255,255,255,0), #f1f1f1);
-        background-image: -o-linear-gradient(rgba(255,255,255,0), #f1f1f1);
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        *overflow: visible;
-        *display: inline;
-        *zoom: 1;
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
       }
+    }
 
-      #goog-wm-sb:hover,
-      #goog-wm-sb:focus {
-        border-color: #aaa;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-        background-color: #f8f8f8;
-      }
 
-      #goog-wm-qt:hover,
-      #goog-wm-qt:focus {
-        border-color: #105cb6;
-        outline: 0;
-        color: #222;
-      }
-
-      input::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-      }
-</style>
+  </style>
+</head>
 <body>
-<div class="container">
-<h1>404 Not found </h1>
-<view style="text-align:center">  
-<p>本页面不存在</p>
-<p>请检查是否输错了网址</p>
-<p>By 孤独岛工作室</p>
-<a href="https://icp.gov.moe/?keyword=20230168" target="_blank">萌ICP备20230168号</a>
-</view>
-<script>var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;</script>
-</div>
+  <header>
+    <h2>孤独岛工作室</h2>
+    <p>该站点功能变化，请返回主页查看</p>
+  </header>
+
+  <section class="link-container">
+    <div class="card">
+      <a href="https://gududaonet.github.io" target="_blank">返回主页</a>
+    </div>
+  </section>
+  <footer>
+    &copy;  孤独岛工作室 Since 2019
+  </footer>
+</body>
+</html>

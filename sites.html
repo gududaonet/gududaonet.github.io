@@ -14,71 +14,145 @@
 body {
     font-family: MiSans Regular;
 }
-div {
-    font-family: MiSans Regular;
-}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: aliceblue;
+      color: black;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color:darkcyan;
+    }
+
+    .link-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: azure;
+      border: 1px solid gray;
+      border-radius: 7px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: white;
+    }
+
+    a {
+      color:#666666;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .latency {
+        font-weight: normal;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: darkcyan;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+
 </style>
-<style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .server-button {
-            margin: 20px;
-            padding: 10px;
-            font-size: 20px;
-            border: none;
-            color: white;
-            background-color: #007BFF;
-            cursor: pointer;
-            border-radius: 20px;
-            width: 300px;
-            text-align: center;
-        }
-        .latency {
-            font-size: 18px;
-        }
-        .green {
-            color: green;
-        }
-        .yellow {
-            color: yellow;
-        }
-        .red {
-            color: red;
-        }
-    </style>
+
 </head>
 <body>
-    <h1>.</h1>
-    <h1>.</h1>
-    <h1>.</h1>
-    <h1>孤独岛工作室网址发布中心</h1>
+  <header>
     <h2>孤独岛工作室 现行网址列表</h2>
-   <p>您正在访问孤独岛工作室永久官网 GududaoNet.Github.io</p>
+    <p>孤独岛工作室永久官网 GududaoNet.Github.io</p>
     <p>站点皆有可能开启禁Ping防护，具体访问状况请参照实际</p>
-    <button id="server1" class="server-button" onclick="window.location.href='https://studio.主页.cn'">主体站点</button>
-    <div id="latency1" class="latency"></div>
-    <button id="server2" class="server-button" onclick="window.location.href='https://gududaostudio.eu.org'">主站</button>
-    <div id="latency2" class="latency"></div>
-    <button id="server3" class="server-button" onclick="window.location.href='https://gududaostudio.cn.eu.org'">站点2</button>
-    <div id="latency3" class="latency"></div>
-    <button id="server4" class="server-button" onclick="window.location.href='https://studio.gududaostudio.cn.eu.org'">站点3</button>
-    <div id="latency4" class="latency"></div>
-    <button id="server5" class="server-button" onclick="window.location.href='https://studio.web.gududaostudio.cn.eu.org'">站点4</button>
-    <div id="latency5" class="latency"></div>
-    <button id="server6" class="server-button" onclick="window.location.href='https://studio.gududaostudio.eu.org'">站点5</button>
-    <div id="latency6" class="latency"></div>
-    <button id="server7" class="server-button" onclick="window.location.href='https://studio.web.gududaostudio.eu.org'">站点6</button>
-    <div id="latency7" class="latency"></div>
-    <button id="server8" class="server-button" onclick="window.location.href='https://gududaocdn.pages.dev/'">站点7</button>
-    <div id="latency8" class="latency"></div>
-    <script>
+
+    </header>
+
+    <section class="link-container">
+ 
+    <div class="card">
+    <a href="https://studio.xn--tiqp32p.cn" target="_blank">
+                <p>主力站1（推荐）</p>
+        <div id="latency1" class="latency"></div>
+    </a>
+    </div>
+
+
+
+    <div class="card">
+    <a href="https://gududaostudio.eu.org" target="_blank">
+                <p>主力站2</p>
+            <div id="latency2" class="latency"></div>
+    </a>
+    </div>
+
+
+
+    <div class="card">
+    <a href="https://gududaostudio.cn.eu.org" target="_blank">
+          <p>备用站1</p>
+        <div id="latency3" class="latency"></div>
+    </a>
+    </div>
+
+
+
+    <div class="card">
+    <a href="https://gududaocdn.pages.dev" target="_blank">
+          <p>备用站2</p>
+        <div id="latency4" class="latency"></div>
+    </a>
+    </div>
+    </a>
+
+    </section>
+
+  <footer>
+    &copy;  孤独岛工作室 Since 2019
+  </footer>
+
+      <script>
         function pingServer(serverUrl, latencyId) {
             let startTime = Date.now();
             fetch(serverUrl, { mode: 'no-cors' })
@@ -86,16 +160,16 @@ div {
                     let latency = Date.now() - startTime;
                     let latencyDiv = document.getElementById(latencyId);
                     if (latency < 1000) {
-                        latencyDiv.className = 'latency green';
+                        latencyDiv.className = 'latency';
                         latencyDiv.innerText = '延迟: ' + latency + 'ms';
                     } else {
-                        latencyDiv.className = 'latency yellow';
-                        latencyDiv.innerText = '延迟: ' + latency + 'ms';
+                        latencyDiv.className = 'latency';
+                        latencyDiv.innerText = '延迟: ' + latency + 'ms(较慢)';
                     }
                 })
                 .catch(() => {
                     let latencyDiv = document.getElementById(latencyId);
-                    latencyDiv.className = 'latency red';
+                    latencyDiv.className = 'latency';
                     latencyDiv.innerText = '无法访问服务器';
                 });
         }
@@ -103,11 +177,8 @@ div {
         pingServer('https://studio.主页.cn', 'latency1');
         pingServer('https://gududaostudio.eu.org', 'latency2');
         pingServer('https://gududaostudio.cn.eu.org', 'latency3');
-        pingServer('https://studio.gududaostudio.cn.eu.org', 'latency4');
-        pingServer('https://studio.web.gududaostudio.cn.eu.org', 'latency5');
-        pingServer('https://studio.gududaostudio.eu.org', 'latency6');
-        pingServer('https://studio.web.gududaostudio.eu.org', 'latency7');
-        pingServer('https://gududaocdn.pages.dev/', 'latency8');
+        pingServer('https://gududaocdn.pages.dev/', 'latency4');
     </script>
+
 </body>
 </html>

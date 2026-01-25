@@ -18,11 +18,6 @@
 body {
     font-family: MiSans Regular;
 }
-div {
-    font-family: MiSans Regular;
-}
-
-
 
 
     * {
@@ -32,9 +27,8 @@ div {
     }
 
     body {
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(to right, #003366, #007acc);
-      color: white;
+      background-color: aliceblue;
+      color: black;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -53,7 +47,7 @@ div {
 
     header p {
       font-size: 1.2rem;
-      color: #cce6ff;
+      color:darkcyan;
     }
 
     .link-container {
@@ -63,34 +57,38 @@ div {
       margin-top: 40px;
       gap: 20px;
       padding: 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       width: 100%;
     }
 
     .card {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
+      background-color: azure;
+      border: 1px solid gray;
+      border-radius: 7px;
       padding: 20px;
       width: 250px;
       text-align: center;
-      transition: transform 0.3s ease, background 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: white;
     }
 
-    .card a {
-      color: #ffffff;
+    a {
+      color:#666666;
       text-decoration: none;
       font-size: 1.1rem;
       font-weight: bold;
     }
 
-    .card a:hover {
+    a:hover {
       text-decoration: underline;
+    }
+
+    .latency {
+        font-weight: normal;
     }
 
     footer {
@@ -98,7 +96,7 @@ div {
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
-      color: #bbdfff;
+      color: darkcyan;
     }
 
     @media (max-width: 600px) {
@@ -106,6 +104,8 @@ div {
         width: 90%;
       }
     }
+
+
   </style>
 </head>
 <body>
@@ -119,26 +119,30 @@ div {
       <a href="https://studio.xn--tiqp32p.cn" target="_blank">孤独岛工作室主页</a>
     </div>
     <div class="card">
-      <a href="https://xn--tiqp32p.cn" target="_blank">简单起始</a>
-    </div>
-    <div class="card">
       <a href="https://gududaonet.github.io/sites.html" target="_blank">网址发布中心</a>
     </div>
     <div class="card">
-      <a href="https://islandai.gududaostudio.cn.eu.org" target="_blank">屿•Ai（私有）</a>
+      <a href="https://xn--tiqp32p.cn" target="_blank">简单起始</a>
+    </div>
+     <div class="card">
+      <a href="https://blog.xn--tiqp32p.cn/" target="_blank">陈某的Blog</a>
     </div>
     <div class="card">
-      <a href="https://mail.gududaostudio.cn.eu.org" target="_blank">孤岛Mail（第三方）</a>
+      <a href="https://islandai.gududaostudio.cn.eu.org" target="_blank">屿•Ai（纪念）</a>
     </div>
     <div class="card">
-      <a href="https://itv.gududaostudio.cn.eu.org/" target="_blank">iTV爱电视（免费影视）</a>
+      <a href="https://chatnvm.xn--tiqp32p.cn" target="_blank">ChatNVM</a>
+    </div>
+    <div class="card">
+      <a href="https://mail.gududaostudio.cn.eu.org" target="_blank">孤岛Mail</a>
+    </div>
+    <div class="card">
+      <a href="https://itv.gududaostudio.cn.eu.org/" target="_blank">iTV爱电视-免费影视</a>
     </div>
      <div class="card">
       <a href="https://bbs.gududaostudio.cn.eu.org/" target="_blank">孤独岛工作室讨论板</a>
     </div>
-    <div class="card">
-      <a href="https://blog.xn--tiqp32p.cn/" target="_blank">陈某的Blog（自用）</a>
-    </div>
+
     
   </section>
 
